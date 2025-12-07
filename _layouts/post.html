@@ -21,13 +21,27 @@ script_includes:
     {% endif %}
 
     <div class="post-meta text-muted">
-      <!-- published date -->
-      <span>
-        {{ site.data.locales[lang].post.posted }}
-        {% include datetime.html date=page.date tooltip=true lang=lang %}
-      </span>
 
-      {# Updated block удалён #}
+      <!-- дата слева, время чтения справа -->
+      <div class="d-flex justify-content-between">
+        <span>
+          {{ site.data.locales[lang].post.posted }}
+          {% include datetime.html date=page.date tooltip=true lang=lang %}
+        </span>
+
+        <div class="text-end">
+          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
+            <span class="me-3">
+              <em id="pageviews">
+                <i class="fas fa-spinner fa-spin small"></i>
+              </em>
+              {{ site.data.locales[lang].post.pageview_measure }}
+            </span>
+          {% endif %}
+
+          {% include read-time.html content=content prompt=true lang=lang %}
+        </div>
+      </div>
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
@@ -45,24 +59,6 @@ script_includes:
           {%- endif -%}
         </div>
       {% endif %}
-
-      <!-- справа: просмотры и время чтения -->
-      <div class="d-flex justify-content-end mt-1">
-        <div class="text-end">
-          <!-- pageviews -->
-          {% if site.pageviews.provider and site.analytics[site.pageviews.provider].id %}
-            <span class="me-3">
-              <em id="pageviews">
-                <i class="fas fa-spinner fa-spin small"></i>
-              </em>
-              {{ site.data.locales[lang].post.pageview_measure }}
-            </span>
-          {% endif %}
-
-          <!-- read time -->
-          {% include read-time.html content=content prompt=true lang=lang %}
-        </div>
-      </div>
     </div>
   </header>
 
