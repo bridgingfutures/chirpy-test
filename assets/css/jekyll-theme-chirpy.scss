@@ -1,9 +1,12 @@
 ---
 ---
 
-@import "main";
+/* prettier-ignore */
+@use 'main {%- if jekyll.environment == 'production' -%} .bundle {%- endif -%} ';
 
-/* Hide author line under post title: "By Bridging Futures Ltd" */
-.post-author {
+/* append your custom style below */
+
+/* Скрываем подпись автора "By …" под заголовком поста */
+.post-meta .post-author {
   display: none;
 }
