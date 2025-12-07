@@ -1,7 +1,7 @@
 ---
 title: "How “temporary protection” for Ukrainians has turned into permanent temporariness in the UK"
 date: 2025-12-07 00:00:00 +0000
-categories: [analysis]
+categories: [overview]
 pin: true
 tags:
   - ukraine-schemes
