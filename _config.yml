@@ -81,7 +81,7 @@ cdn:
 avatar: /assets/img/avatar/bridging-futures.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-social_preview_image:
+social_preview_image: /assets/img/social-card.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true
