@@ -15,7 +15,7 @@ tags:
   - limbo
 ---
 
-Bridging Futures is a UK-based, Ukrainian-led non-profit working to help build a pathway to long-term settlement for people on the UK’s Ukraine visa schemes.
+Bridging Futures is a UK-based, Ukrainian-led non-profit working to help build a pathway to long-term settlement for people under the UK’s Ukraine visa schemes.
 
 This first post traces how the position of Ukrainians in the UK has quietly shifted from genuine temporary protection to a form of permanent temporariness – in some respects leaving us, in the long term, worse off than people who arrived irregularly.
 
